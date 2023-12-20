@@ -11,7 +11,7 @@ services:
     command: redis-server /usr/local/etc/redis/redis.conf
 
   consoleenviromonitorrpi:
-    container_name: test
+    container_name: console
     privileged: true
     image: cetniqhub/consoleenviromonitorrpi:v0.9
     network_mode: host
