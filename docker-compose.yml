@@ -1,0 +1,26 @@
+version: '0.9'
+services:
+  redis_server:
+    container_name: redis_server
+    restart: unless-stopped
+    image: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - /home/monitoringbbsk/rpi_local_files/console_components/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
+
+  consoleenviromonitorrpi:
+    container_name: test
+    privileged: true
+    image: cetniqhub/consoleenviromonitorrpi:v0.9
+    network_mode: host
+    devices:
+      - /dev/ttyUSB0
+    volumes:
+      - /home/monitoringbbsk/rpi_local_files/console_components/logs:/app/logs
+    logging:  
+      driver: local
+      options:
+        max-size: 10m  
+        max-file: 3
