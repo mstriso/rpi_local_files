@@ -13,7 +13,7 @@ services:
   consoleenviromonitorrpi:
     container_name: console
     privileged: true
-    image: cetniqhub/consoleenviromonitorrpi:v0.9
+    image: cetniqhub/consoleenviromonitorrpi:v0.92
     network_mode: host
     devices:
       - /dev/ttyUSB0
