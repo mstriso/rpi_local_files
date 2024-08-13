@@ -14,7 +14,7 @@ services:
     container_name: console
     privileged: true
     restart: always
-    image: cetniqhub/consoleenviromonitorrpi:v0.92
+    image: cetniqhub/consoleenviromonitorrpi:v0.93
     network_mode: host
     devices:
       - /dev/ttyUSB0
