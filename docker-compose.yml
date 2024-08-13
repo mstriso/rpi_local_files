@@ -1,4 +1,4 @@
-version: '0.9'
+version: '3.3'
 services:
   redis_server:
     container_name: redis_server
@@ -22,5 +22,5 @@ services:
     logging:  
       driver: local
       options:
-        max-size: 10m  
-        max-file: 3
+        max-size: "10m"  
+        max-file: "3"
